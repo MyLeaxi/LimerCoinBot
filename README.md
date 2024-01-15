@@ -7,6 +7,8 @@ Coincatcher tıklamada başarısız olduğunda, config.json dosyasındaki sayıy
 
 Örnek: 30 ise, 40-50 yapın 
 
+#EN
+
 If you know python you can use it, if you don't know python you can download the exe from the tags and use it. 
 
 
