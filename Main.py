@@ -5,6 +5,7 @@ import cv2
 import random
 import keyboard
 import numpy as np
+import json
 
 input("Başlıyoruz (Enter'a basın.)")
 
@@ -38,6 +39,10 @@ print("Geri sayım bitti!")
 os.system("title ByLeaxi - Discord.gg/7WAe2ySZNN")
 
 def perform_actions():
+    with open('config.json', 'r') as file:
+        config = json.load(file)
+    lleaxi = int(config['Leaxi'])
+    
     game_image_path = 'ff/Game.png'
     start_image_path = 'ff/Start.png'
     play_image_path = 'ff/Play.png'
@@ -103,16 +108,16 @@ def perform_actions():
                 break
             if btc is not None:
                 x, y = pyautogui.center(btc)
-                pyautogui.click(x, y + 30)
+                pyautogui.click(x, y + lleaxi)
             elif eth is not None:
                 x, y = pyautogui.center(eth)
-                pyautogui.click(x, y + 30)
+                pyautogui.click(x, y + lleaxi)
             elif bnb is not None:
                 x, y = pyautogui.center(bnb)
-                pyautogui.click(x, y + 30)
+                pyautogui.click(x, y + lleaxi)
             elif x is not None:
                 x, y = pyautogui.center(x)
-                pyautogui.click(x, y + 30)
+                pyautogui.click(x, y + lleaxi)
 
             time.sleep(0.1)
 
